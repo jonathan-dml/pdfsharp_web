@@ -1,6 +1,11 @@
 import type { Endpoint } from "./endpoints";
 import { useTranslation } from "react-i18next";
+import { CopyContent } from "./CopyContent";
+import { DeleteContent } from "./DeleteContent";
+import { ExtractContent } from "./ExtractContent";
 import { MergeContent } from "./MergeContent";
+import { ReorderContent } from "./ReorderContent";
+import { RotateContent } from "./RotateContent";
 import { SplitContent } from "./SplitContent";
 
 export function EndpointContent({ endpoint }: { endpoint: Endpoint }) {
@@ -15,6 +20,11 @@ export function EndpointContent({ endpoint }: { endpoint: Endpoint }) {
             </p>
             {endpoint.id === "merge" && <MergeContent />}
             {endpoint.id === "split" && <SplitContent />}
+            {endpoint.id === "extract" && <ExtractContent />}
+            {endpoint.id === "delete" && <DeleteContent />}
+            {endpoint.id === "rotate" && <RotateContent />}
+            {endpoint.id === "reorder" && <ReorderContent />}
+            {endpoint.id === "copy" && <CopyContent />}
         </section>
     );
 }

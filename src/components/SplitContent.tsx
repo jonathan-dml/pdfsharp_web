@@ -311,7 +311,7 @@ export function SplitContent() {
                             <div className="split-preview-shell">
                                 <span className="eyebrow">{t("splitUpload.previewTitle")}</span>
                                 <p className="split-group-help">
-                                    Drag pages together to group them. Drag a page onto the empty list area to create a new group.
+                                    {t("splitUpload.groupingHelp")}
                                 </p>
                                 <Document
                                     file={selectedFile}

@@ -720,6 +720,220 @@ h1 {
     }
 }
 
+.page-select-workspace {
+    margin-top: 58px;
+}
+.page-select-top {
+    display: grid;
+    gap: 28px;
+}
+.page-select-editor {
+    margin-top: 30px;
+}
+.page-select-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+}
+.page-select-summary strong {
+    display: block;
+    margin-top: 8px;
+    color: var(--text);
+    font-size: 13px;
+    word-break: break-word;
+}
+.page-select-count {
+    color: var(--cyan);
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.page-select-hint {
+    margin: 10px 0 22px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+.page-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+.page-card {
+    position: relative;
+    padding: 0;
+    border: 1px solid var(--line-bright);
+    background: transparent;
+    color: inherit;
+    cursor: default;
+}
+.page-card.selectable {
+    cursor: pointer;
+}
+.page-card.grabbable {
+    cursor: grab;
+}
+.page-card.grabbable:active {
+    cursor: grabbing;
+}
+.page-card.selected {
+    border-color: var(--cyan);
+    box-shadow: 0 0 0 1px var(--cyan), 0 0 16px var(--cyan-glow);
+}
+.page-card.marked-remove {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 1px var(--orange);
+}
+.page-card-preview {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 170px;
+    width: 130px;
+    background: #f4f6f2;
+    overflow: hidden;
+}
+.page-card-preview canvas {
+    max-width: 100%;
+    height: auto !important;
+}
+.page-card.marked-remove .page-card-preview {
+    opacity: 0.4;
+}
+.page-card-index {
+    position: absolute;
+    left: 6px;
+    bottom: 6px;
+    padding: 2px 5px;
+    color: var(--muted);
+    background: rgba(244, 246, 242, 0.88);
+    font-family: var(--mono);
+    font-size: 9px;
+}
+.page-card-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--cyan);
+    color: var(--bg);
+    background: var(--cyan);
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    z-index: 1;
+}
+.page-card-remove-mark {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--orange);
+    font-size: 26px;
+    background: rgba(8, 17, 19, 0.35);
+}
+.rotate-card-controls {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: flex;
+    gap: 4px;
+    z-index: 1;
+}
+.rotate-button {
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    background: var(--surface);
+    font-size: 15px;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+}
+.rotate-button:hover {
+    color: var(--bg);
+    background: var(--cyan);
+}
+.rotate-card-angle {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    padding: 2px 5px;
+    color: var(--bg);
+    background: var(--cyan);
+    font-family: var(--mono);
+    font-size: 9px;
+    z-index: 1;
+}
+.page-select-action {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    padding: 12px 14px;
+    border: 1px solid var(--cyan);
+    color: var(--bg);
+    background: var(--cyan);
+    font-family: var(--mono);
+    font-size: 11px;
+    cursor: pointer;
+}
+.page-select-action:hover:not(:disabled) {
+    color: var(--text);
+    background: transparent;
+}
+.page-select-action:disabled {
+    cursor: not-allowed;
+    opacity: 0.38;
+}
+.two-file-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.two-file-column {
+    min-width: 0;
+    display: grid;
+    gap: 10px;
+    align-content: start;
+}
+.two-file-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 12px;
+    border: 1px solid var(--line-bright);
+    background: rgba(12, 25, 28, 0.46);
+}
+.two-file-summary strong {
+    overflow: hidden;
+    color: var(--text);
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media (max-width: 760px) {
+    .two-file-row {
+        grid-template-columns: 1fr;
+    }
+    .page-card-preview {
+        width: 110px;
+        min-height: 150px;
+    }
+}
+
 .hero {
     position: relative;
 
