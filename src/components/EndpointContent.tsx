@@ -1,6 +1,7 @@
 import type { Endpoint } from "./endpoints";
 import { useTranslation } from "react-i18next";
 import { MergeContent } from "./MergeContent";
+import { SplitContent } from "./SplitContent";
 
 export function EndpointContent({ endpoint }: { endpoint: Endpoint }) {
     const { t } = useTranslation();
@@ -13,6 +14,7 @@ export function EndpointContent({ endpoint }: { endpoint: Endpoint }) {
                 {t(`endpoints.${endpoint.translationKey}.description`)}
             </p>
             {endpoint.id === "merge" && <MergeContent />}
+            {endpoint.id === "split" && <SplitContent />}
         </section>
     );
 }
